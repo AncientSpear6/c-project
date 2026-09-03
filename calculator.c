@@ -12,7 +12,7 @@ int main(){
     while(1){
     printf("Enter 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division or 0 to quit: ");
     scanf("%d", &operation);
-    if(operation < 0 || operation > 4){
+    if(operation < 0.0 || operation > 4){
         printf("Invalid input");
     }
     if(operation == 0){
