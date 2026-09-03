@@ -9,8 +9,16 @@ int main(){
     int operation;
     float ans;
     float a, b, c=1;
-    printf("Enter 1 for addition, 2 for subtraction, 3 for multiplication or 4 for division: ");
+    while(1){
+    printf("Enter 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division or 0 to quit: ");
     scanf("%d", &operation);
+    if(operation < 0 || operation > 4){
+        printf("Invalid input");
+    }
+    if(operation == 0){
+        printf("Goodbye");
+        return 0;
+    }
     if(operation == 1){
         printf("Enter 2 numbers to add: ");
         scanf("%f %f", &a, &b);
@@ -35,6 +43,7 @@ int main(){
         ans = div(a, b);
         printf("%f\n", ans);
     }
+}
     return 0;
 }
 
